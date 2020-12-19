@@ -13,6 +13,7 @@ traj_path = "/home/jf8/NarK-MD/strip-trajs-combined/NarK_stripped_dcd"
 trajectory_format = "dcd"
 
 # Osprey Parameters
+# Optional, the default codes will vary these parameters except the lagtime
 clusters=200
 lagtime=150
 tica_lagtime=1
