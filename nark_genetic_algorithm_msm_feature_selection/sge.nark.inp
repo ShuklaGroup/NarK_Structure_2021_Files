@@ -1,0 +1,11 @@
+#$ -S /bin/bash
+#$ -q all.q
+#$ -pe orte 1
+#$ -o /home/jf8/optimal_probes/nark/ca_contacts
+#$ -e /home/jf8/optimal_probes/nark/ca_contacts
+#$ -N feturization_nark
+#$ -cwd
+
+cd /home/jf8/optimal_probes/nark/ca_contacts
+
+python3 featurize_noredu.py

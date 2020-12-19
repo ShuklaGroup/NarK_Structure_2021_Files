@@ -1,0 +1,19 @@
+sourceCodePath='/home/jf8/optimal_probes/vary_nark_genetic_algorithm_optimized'
+# Job Identifiers
+jobname = "nark-vary"
+# Genetic Algorithm Parameters
+N_ITERATIONS=40
+populationSize=20
+percentMutation=50
+percentCrossover=20
+
+# Trajectory Information
+topology_file = "/home/jf8/NarK-MD/strip-trajs-combined/NarK-strip.pdb"
+traj_path = "/home/jf8/NarK-MD/strip-trajs-combined/NarK_stripped_dcd"
+trajectory_format = "dcd"
+
+# Osprey Parameters
+clusters=200
+lagtime=150
+tica_lagtime=1
+tica_components=5

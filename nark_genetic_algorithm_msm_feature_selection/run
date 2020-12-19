@@ -1,0 +1,39 @@
+#!/bin/bash
+
+input_file=$1
+
+while read line;
+do
+       	if [[ $line == *"sourceCodePath"* ]]
+       	then
+       		eval "$line";
+       	fi
+       	if [[ $line == *"ITERATIONS"* ]]
+       	then
+       		eval "$line";
+       		break;
+       	fi
+done < ${input_file}
+
+for i in $(seq 1 $N_ITERATIONS);
+do
+       	echo ITERATION${i}
+       	python $sourceCodePath/generateSetsGA.py $i compatiblePairs.txt ${input_file};
+       	python $sourceCodePath/ftrAndOsprey.py ${input_file} iter_${i}_input_sets.txt
+
+       	while [ ! -f iter_${i}_output_sets.txt ]
+       	do
+       		sleep 2m
+       	done
+
+       	sleep 2m
+
+       	folder=ITER${i}
+       	mkdir ${folder}
+        rm ${input_file}_*/*pkl
+       	mv ${input_file}_* $folder/
+       	mv iter_*.txt $folder/
+	rm *tot*.*
+        mv *tot* $folder/
+       	cp $folder/iter_${i}_output_sets.txt .
+done

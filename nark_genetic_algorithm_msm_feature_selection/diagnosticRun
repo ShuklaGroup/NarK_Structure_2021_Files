@@ -1,0 +1,23 @@
+if [ "$1" = "-version" ];
+then
+       	echo "Optimal Probes version 1.0"
+else
+       	echo "Welcome to Optimal Probes!"
+       	echo "Please wait as we check the installation ... "
+       	echo ""
+       	echo "Optimal Probes version 1.0"
+       	echo "import msmbuilder.version" > tempDiagnostics.py
+       	echo "print msmbuilder.version.full_version" >> tempDiagnostics.py
+       	python tempDiagnostics.py > tempDiagnosticsoutput
+       	echo "MSMBuilder version: "$(cat tempDiagnosticsoutput)
+       	rm tempDiagnostics*
+       	echo "import mdtraj" > tempDiagnostics.py
+       	echo "print mdtraj.version.full_version" >> tempDiagnostics.py
+       	python tempDiagnostics.py > tempDiagnosticsoutput
+       	echo "MDTraj version: "$(cat tempDiagnosticsoutput)
+       	rm tempDiagnostics*
+       	osprey --version > tempDiagnosticsoutput
+       	$(cat tempDiagnosticsoutput)
+       	rm tempDiagnostics*
+       	echo ""
+fi
