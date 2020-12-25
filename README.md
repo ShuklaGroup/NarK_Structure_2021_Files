@@ -1,29 +1,26 @@
 # How antiporters exchange substrates across the cell membrane? An atomic-level description of the complete exchange cycle in NarK.
 
-Predicted coordinate files, source codes and data for adaptive MD simulations, MSMs hyper-parameters selection, and MSMs construction. 
+This package provides the predicted coordinate files, source codes and data for adaptive MD simulations, MSMs hyper-parameters selection, and MSMs construction as shown in the following manuscript:
+
+Feng J., Selvam B., and Shukla D. (2020), How antiporters exchange substrates across the cell membrane? An atomic-level description of the complete exchange cycle in NarK.
+
 
 ## nark_adaptive_sampling
+In-house python scripts for the adaptive MD simulations
 
 ## nark_genetic_algorithm_msm_feature_selection
-* data
-* source_codes
+* source_codes: scipts for implementing the genetic algorithm for feature selection
+* data: input files and output data generated in this work
 
 ## nark_msm_final_model_construction
+In-house python scripts for the msm construction
 
 ## predicted_structures_pdb_files
 
 * related to Figure 1: coordinate files for predicted OF, OC, and IF states  
 * related to Figure 5: coordinate files for 8 predicted conformations
 
-## Authors
 
-Jiangyan Feng - jf8@illinois.edu
 
-Ph.D. Candidate
 
-Chemical and Bimolecular Engineering
-
-University of Illinois at Urbana-Champaign
-
-200 RAL, 600 S. Mathews Ave., Urbana IL 61801
 
