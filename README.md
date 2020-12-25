@@ -1,6 +1,6 @@
 # How antiporters exchange substrates across the cell membrane? An atomic-level description of the complete exchange cycle in NarK.
 
-This package provides the predicted coordinate files, source codes and data for adaptive MD simulations, MSMs hyper-parameters selection, and MSMs construction as shown in the following manuscript:
+This repository provides the predicted coordinate files, source codes and data for adaptive MD simulations, MSMs hyper-parameters selection, and MSMs construction as shown in the following manuscript:
 
 Feng J., Selvam B., and Shukla D. (2020), How antiporters exchange substrates across the cell membrane? An atomic-level description of the complete exchange cycle in NarK.
 
